@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://amaliedue.github.io/multisig-hmac-website/"
 languageCode = "en-us"
 title = "Multisig HMAC"
 theme = "ananke"
