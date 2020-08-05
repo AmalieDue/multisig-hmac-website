@@ -10,20 +10,15 @@ Multisig HMAC is a novel, symmetric signature scheme allowing a threshold of sig
 
 Key management can happen in either of two modes, either by storing every of the component keys, or by storing a single master seed and using that to derive keys ad hoc.
 
-Fully open-source implementations in [Javascript](#more-about-the-javascript-implementation), [Python](#more-about-the-python-implementation), and [Java](#more-about-the-java-implementation) are presented below. The projects are available on Github via:
+Fully open-source implementations in [Javascript](#javascript), [Python](#python), and [Java](#java) and available on Github, npm, PyPI, and MavenCentral:
 
-* [https://github.com/emilbayes/multisig-hmac](https://github.com/emilbayes/multisig-hmac)
-* [https://github.com/AmalieDue/multisig-hmac](https://github.com/AmalieDue/py-multisig-hmac)
-* [https://github.com/AmalieDue/multisig-hmac](https://github.com/AmalieDue/java-multisig-hmac)
-
-and available on [PyPI](https://pypi.org/project/multisig-hmac/) and [MavenCentral](https://search.maven.org/artifact/dk.hyperdivision/multisig_hmac/2.0.0/jar).
-
+* [https://github.com/emilbayes/multisig-hmac](https://github.com/emilbayes/multisig-hmac) [(npm)](https://www.npmjs.com/package/multisig-hmac)
+* [https://github.com/AmalieDue/multisig-hmac](https://github.com/AmalieDue/py-multisig-hmac) [(PyPI)](https://pypi.org/project/multisig-hmac/)
+* [https://github.com/AmalieDue/multisig-hmac](https://github.com/AmalieDue/java-multisig-hmac) [(MavenCentral)](https://search.maven.org/artifact/dk.hyperdivision/multisig_hmac/2.0.0/jar)
 
 ---
 
-## More About the Javascript Implementation
-Link to Javascript source code:
-* [https://github.com/emilbayes/multisig-hmac](https://github.com/emilbayes/multisig-hmac)
+## Javascript
 
 Example from the Javascript implementation, using stored keys:
 
@@ -88,9 +83,7 @@ console.log(verified)
 
 ---
 
-## More About the Python Implementation
-Link to Python source code and PyPI package:
-* [https://github.com/AmalieDue/py-multisig-hmac](https://github.com/AmalieDue/py-multisig-hmac) [(PyPI)](https://pypi.org/project/multisig-hmac/)
+## Python
 
 Example from the Python implementation, using stored keys:
 ```python
@@ -169,10 +162,7 @@ print(m.verifyDerived(seed, signature, data, threshold))
 
 ---
 
-## More About the Java Implementation
-
-Link to Java source code and MavenCentral project:
-* [https://github.com/AmalieDue/java-multisig-hmac](https://github.com/AmalieDue/java-multisig-hmac) [(MavenCentral)](https://search.maven.org/artifact/dk.hyperdivision/multisig_hmac/2.0.0/jar)
+## Java
 
 Example from the Java implementation, using stored keys:
 ```java
