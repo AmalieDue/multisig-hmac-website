@@ -34,4 +34,20 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   # featured_image = "/images/gohugo-default-sample-hero-image.jpg"
   recent_posts_number = 2
-  custom_css = ["css/custom.css"]
+
+## Main Menu
+[[menu.main]]
+    name = "Java"
+    weight = 100
+    identifier = "Java"
+    url = "../#java"
+[[menu.main]]
+    name = "Javascript"
+    identifier = "Javascript"
+    weight = 200
+    url = "../#javascript"
+[[menu.main]]
+    name = "Python"
+    identifier = "Python"
+    weight = 300
+    url = "../#python"
