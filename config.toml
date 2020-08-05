@@ -40,14 +40,14 @@ enableRobotsTXT = true
     name = "Java"
     weight = 100
     identifier = "Java"
-    url = "../#java"
+    url = "/#java"
 [[menu.main]]
     name = "Javascript"
     identifier = "Javascript"
     weight = 200
-    url = "../#javascript"
+    url = "/#javascript"
 [[menu.main]]
     name = "Python"
     identifier = "Python"
     weight = 300
-    url = "../#python"
+    url = "/#python"
