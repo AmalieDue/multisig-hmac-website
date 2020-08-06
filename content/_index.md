@@ -268,6 +268,6 @@ $ TeX Code $ or \( TeX Code \sqrt{} \)
 
 Is an integral 
 
-test
+\( test \)
 
 test
