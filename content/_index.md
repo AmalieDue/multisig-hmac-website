@@ -264,6 +264,10 @@ The following
 
 $$\int_{a}^{b} x^2 dx$$
 
+`$ TeX Code $` or `\( TeX Code \sqrt{} \)`
+
 Is an integral 
+
+test
 
 test
