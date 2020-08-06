@@ -51,3 +51,8 @@ enableRobotsTXT = true
     identifier = "Python"
     weight = 300
     url = "/#python"
+[[menu.main]]
+    name = "Security Analysis"
+    identifier = "Security Analysis"
+    weight = 400
+    url = "/#security-analysis"
