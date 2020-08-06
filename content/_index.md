@@ -2,8 +2,6 @@
 title: ""
 date: 2020-08-04T09:38:32+02:00
 draft: false
-katex: true
-markup: "mmark"
 ---
 
 ## About the project
@@ -244,11 +242,13 @@ public class DerivedKeys {
 
 ## Security Analysis
 
-The cryptographic strength of the HMAC depends on the size of the secret key that is used. Since the implementations support SHA256, SHA512, and SHA384 for HMAC, then key sizes of 64, 128, and 128 bytes respectively are used (i.e. 512, 1024, and 1024 bits respectively). This gives HMAC values of size 32, 64, and 48 bytes respectively (256, 512, and 384 bits respectively). In cryptography, a Pseudo Random Function family, PRF, is a collection of functions which emulate a random oracle in the following way: No efficient algorithm can distinguish between a function randomly chosen from the PRF family and a function whose outputs are fixed completely at random. In 2006, it was proved that HMAC is a PRF under the assumption that the compression function is a PRF. A way to prove that the XOR of two PRFs, or more specifically two HMACs in this case, is also PRF is by thinking about the contrapositive of the statement: If the XOR of two HMACs is not PRF, then HMAC is not PRF. Let F : {0,1}^n x {0,1}^n -> 
+The cryptographic strength of the HMAC depends on the size of the secret key that is used. In this project, the maximum key sizes are used. Since the implementations support SHA256, SHA512, and SHA384 for HMAC, then key sizes of 64, 128, and 128 bytes respectively are used (i.e. 512, 1024, and 1024 bits respectively). The HMAC values have sizes 32, 64, and 48 bytes respectively (256, 512, and 384 bits respectively). In cryptography, a Pseudo Random Function family, PRF, is a collection of functions which emulate a random oracle in the following way: No efficient algorithm can distinguish between a function randomly chosen from the PRF family and a function whose outputs are fixed completely at random. In 2006, it was proved that HMAC is a PRF under the assumption that the compression function is a PRF. A way to prove that the XOR of two PRFs, or more specifically two HMACs in this case, is also PRF is by thinking about the contrapositive of the statement: If the XOR of two HMACs is not PRF, then HMAC is not PRF. The idea is to suppose that an adversary or distinguisher _D_ breaks the secrecy of the XOR'ed PRFs and then use _D_ to construct a distinguisher _D'_ which can break the security of at least one of the single PRF's. The conclusion of the proof is that 
 
+* If two XOR'ed HMACs is not PRF, then HMAC is not PRF.
+* It was proved in 2006 that HMAC is PRF.
+* Hence: Two XOR'ed HMACs is PRF.
 
-
-Furthermore, the XOR of two PRFs is PRF. See more about the security of HMACs of the [Wikipedia page](https://en.wikipedia.org/wiki/HMAC#Security).
+See more about the security of HMACs of the [Wikipedia page](https://en.wikipedia.org/wiki/HMAC#Security).
 
 With an HMAC output size of 256 bits, there are N = 2^256 different HMAC values. When one HMAC value has been picked, there are N-1 HMAC values remaining. The probability of randomly picking two unique HMAC values is (N-1)/N, and likewise the probability of randomly picking the same HMAC value twice is therefore
 
@@ -256,18 +256,6 @@ With an HMAC output size of 256 bits, there are N = 2^256 different HMAC values.
 1 - (N-1)/N = N/N - (N-1)/N = (N-N+1)/N = 1/N. 
 ```
 
-As the XOR'ing of two HMAC values is also PRF, the security level is still satisfied, i.e. the birthday bound still holds: It is possible to find a collision of HMAC values in 2^(n/2).
+As the XOR'ing of two HMAC values is also PRF according to some proofs, the security level is still satisfied, i.e. the birthday bound still holds: It is possible to find a collision of HMAC values in 2^(n/2).
 
-In conclusion, the probability that the XOR'ing of some number of signatures will not be successfull is negligible.
-
-The following
-
-$$\int_{a}^{b} x^2 dx$$
-
-$ TeX Code $ or \( TeX Code \sqrt{} \)
-
-Is an integral 
-
-\( test k_1 k_{2} \)
-
-test
+In conclusion, the probability that XOR'ing some number of signatures will not be successfull is negligible.
