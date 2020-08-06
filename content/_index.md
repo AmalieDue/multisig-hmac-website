@@ -248,7 +248,7 @@ The cryptographic strength of the HMAC depends on the size of the secret key tha
 * It was proved in 2006 that HMAC is PRF.
 * Hence: Two XOR'ed HMACs is PRF.
 
-See more about the security of HMACs of the [Wikipedia page](https://en.wikipedia.org/wiki/HMAC#Security).
+See more about the security of HMACs on the [Wikipedia page](https://en.wikipedia.org/wiki/HMAC#Security).
 
 With an HMAC output size of 256 bits, there are N = 2^256 different HMAC values. When one HMAC value has been picked, there are N-1 HMAC values remaining. The probability of randomly picking two unique HMAC values is (N-1)/N, and likewise the probability of randomly picking the same HMAC value twice is therefore
 
